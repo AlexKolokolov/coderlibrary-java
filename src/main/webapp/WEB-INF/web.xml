@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.Main</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Books</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.Books</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Books</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Courses</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.Courses</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Courses</servlet-name>
+        <url-pattern>/courses</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Sites</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.Sites</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Sites</servlet-name>
+        <url-pattern>/sites</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>About</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.About</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>About</servlet-name>
+        <url-pattern>/about</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Feedback</servlet-name>
+        <servlet-class>ua.com.coderlibrary.servlets.Feedback</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Feedback</servlet-name>
+        <url-pattern>/feedback</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-width: 600px;
+    width: 100%;
+    min-height: 98%;
+    background-color: #fff;
+    color: #000;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Стили для header*/
+header {
+    width: 78%;
+    margin: 1%;
+    padding-left: 20%;
+    background-color: aqua;
+    text-shadow: 2px 2px 5px #999;
+}
+
+header h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header nav table {
+    border-collapse: collapse;
+}
+
+header nav table td {
+    margin: 0;
+    padding: 5px;
+}
+
+header nav table td:hover, header nav table td#active {
+    background-color: white;
+}
+
+/*Стили для main*/
+main {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+main article, main nav {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 1%;
+    background-color: aqua;
+}
+
+main article header {
+    width: 98%;
+    margin: 0;
+    padding: 5px 1% 5px 1%;
+    background-color: #999;
+    font-size: 1em;
+}
+
+main article img {
+    max-height: 250px;
+    margin: 10px;
+}
+
+main article p, main article form {
+    padding: 10px;
+}
+
+main article a:hover {
+    color: #55b;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    background-color: #999;
+    font-size: 1em;
+    border: none;
+}
+
+.button:hover {
+    background-color: #aaa;
+}
+
+main nav {
+    position: relative;
+    height: 2rem;
+}
+
+main nav #previous {
+    position: absolute;
+    left: 10px;
+}
+
+main nav #next {
+    position: absolute;
+    right: 10px;
+}
+
+main nav .pageNumber {
+    position: absolute;
+    left: 40%;
+}
+
+/*Стили для обратной связи*/
+main article form label {
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 1.2em;
+}
+
+main article form input {
+    width: 200px;
+    padding: 2px;
+    font-size: 1.2em;
+}
+
+main article form input.button {
+    width: auto;
+    margin-left: 45%;
+}
+
+main article form textarea {
+    width: 80%;
+    margin-left: 10%;
+    height: 120px;
+    font-size: 1.2em;
+    resize: none;
+    padding: 2px;
+}
+
+
+
+
+
+
+/*Стили для нижнего колонтитула*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    margin: 1%;
+    padding: 10px 0 10px 2%;
+    background-color: aqua;
+}
+
+/*Стили для экранов меньше 700px*/
+@media (max-width: 700px) {
+    main {
+        width: 98%;
+    }
+
+    header {
+        width: 96%;
+        padding-left: 2%;
+    }
+}
+
