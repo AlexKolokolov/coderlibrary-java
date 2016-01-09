@@ -14,19 +14,21 @@
     <context:component-scan base-package="ua.com.coderlibrary" />
     <tx:annotation-driven transaction-manager="txManager"/>
 
+    <!--
     <bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://127.11.109.130:3306/webapp"/>
         <property name="username" value="adminszZKb4c"/>
         <property name="password" value="wy6hH7W6HD7N"/>
     </bean>
+    -->
 
-    <!--
+
     <bean name="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
         <property name="jndiName" value="jdbc/coderlibrary" />
         <property name="resourceRef" value="true" />
     </bean>
-    -->
+
 
     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
