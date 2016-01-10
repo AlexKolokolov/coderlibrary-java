@@ -31,11 +31,12 @@ public class Feedback extends HttpServlet {
         String userName = req.getParameter("userName");
         String userEmail = req.getParameter("userEmail");
         String subject = req.getParameter("subject");
-        String messageBydy = req.getParameter("messageBody");
+        String messageBody = req.getParameter("messageBody");
 
-        Mailer.getInstance().sendMessage("kolokolov_a@ukr.net", userEmail, subject, messageBydy);
+        Mailer.getInstance().sendMessage("kolokolov_a@ukr.net", userEmail, subject,
+                userName + " <" + userEmail + "> : " + messageBody);
 
-        String message = "Спасибо, " + userName + "!<br> Ваше сообщение:<br>\"" + messageBydy + "\"<br>отправлено.";
+        String message = "Спасибо, " + userName + "!<br> Ваше сообщение:<br>\"" + messageBody + "\"<br>отправлено.";
         req.setAttribute("message", message);
 
         doGet(req, resp);
