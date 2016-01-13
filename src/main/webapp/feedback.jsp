@@ -21,12 +21,7 @@
                 </form>
                 <c:if test="${not empty message}">
                     <h3>${message}</h3>
-                    <input class="button" type="button" onclick="refresh()" value="OK">
-                    <script>
-                        function refresh() {
-                            location.href="/feedback"
-                        }
-                    </script>
+                    <input class="button" type="button" onclick="window.location.href='/feedback'" value="OK">
                 </c:if>
             </article>
             <%@ include file="modules/social.jsp"%>
