@@ -1,6 +1,7 @@
 package ua.com.coderlibrary.servlets;
 
 import ua.com.coderlibrary.controller.Mailer;
+import ua.com.coderlibrary.view.EmailMessage;
 import ua.com.coderlibrary.view.HeaderPanel;
 
 import javax.servlet.ServletException;
@@ -40,13 +41,14 @@ public class Feedback extends HttpServlet {
         String userEmail = req.getParameter("userEmail");
         String subject = req.getParameter("subject");
         String messageBody = req.getParameter("messageBody");
-        Mailer.getInstance().sendMessage("kolokolov_a@ukr.net", userEmail, subject,
-                userName + " <" + userEmail + "> : " + messageBody);
-        showSentMessage(req, userName, messageBody);
+        EmailMessage emailMessage = new EmailMessage(userName, userEmail, subject, messageBody);
+        Mailer.getInstance().sendMessage("kolokolov_a@ukr.net", emailMessage);
+        showSentMessage(req, emailMessage);
     }
 
-    private void showSentMessage(HttpServletRequest req, String userName, String messageBody) {
-        String message = "Спасибо, " + userName + "!<br> Ваше сообщение:<br>\"" + messageBody + "\"<br>отправлено.";
+    private void showSentMessage(HttpServletRequest req, EmailMessage emailMessage) {
+        String message = "Спасибо, " + emailMessage.getUserName() + "!<br> Ваше сообщение:<br>\""
+                + emailMessage.getMessageBody() + "\"<br>отправлено.";
         req.setAttribute("message", message);
     }
 }

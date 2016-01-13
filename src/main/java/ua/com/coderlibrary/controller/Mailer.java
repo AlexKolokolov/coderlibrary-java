@@ -3,6 +3,7 @@ package ua.com.coderlibrary.controller;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.com.coderlibrary.mailsend.MailService;
+import ua.com.coderlibrary.view.EmailMessage;
 
 /**
  * Created by Administrator on 08.01.2016.
@@ -21,7 +22,7 @@ public class Mailer {
         return instance;
     }
 
-    public void sendMessage(String to, String from, String subject, String body) {
-        mailService.sendMail(to, from, subject, body);
+    public void sendMessage(String to, EmailMessage emailMessage) {
+        mailService.sendMail(to, emailMessage.getUserName(), emailMessage.getSubject(), emailMessage.getMessageForSending());
     }
 }
