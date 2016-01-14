@@ -13,7 +13,7 @@ import java.util.List;
  * и возвращает сервлетам необходимые данные.
  */
 public class Controller {
-    private static Controller instance;
+    private static final Controller INSTANCE = new Controller();
     private DAO dao;
 
     private Controller() {
@@ -21,9 +21,8 @@ public class Controller {
         dao = (DAO)context.getBean("dao");
     }
 
-    public static synchronized Controller getInstance() {
-        if (instance == null) instance = new Controller();
-        return instance;
+    public static Controller getInstance() {
+        return INSTANCE;
     }
 
     public List getBooks(int page, int pageSize) {
