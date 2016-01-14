@@ -5,11 +5,7 @@ import ua.com.coderlibrary.dao.DAO;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.com.coderlibrary.model.Book;
-import ua.com.coderlibrary.model.Course;
-import ua.com.coderlibrary.model.Site;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
