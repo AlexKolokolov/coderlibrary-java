@@ -25,7 +25,7 @@ public class Controller {
         dao = (DAO)context.getBean("dao");
     }
 
-    public static Controller getInstance() {
+    public static synchronized Controller getInstance() {
         if (instance == null) instance = new Controller();
         return instance;
     }
